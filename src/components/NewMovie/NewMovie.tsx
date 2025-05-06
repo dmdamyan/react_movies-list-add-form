@@ -15,11 +15,11 @@ export const NewMovie: React.FC<Props> = ({ onAdd }) => {
   const [count, setCount] = useState(0);
 
   const isFieldTrim =
-    title.trim() &&
-    description.trim() &&
-    imgUrl.trim() &&
-    imdbUrl.trim() &&
-    imdbId.trim();
+    title.trim() !== '' &&
+    description.trim() !== '' &&
+    imgUrl.trim() !== '' &&
+    imdbUrl.trim() !== '' &&
+    imdbId.trim() !== '';
 
   const reset = () => {
     setTitle('');
